@@ -1,0 +1,13 @@
+---
+# Send all users a message that things are gonna get rebootey soon.
+- name: Warn logged in users
+  win_msg: 
+    msg: "{{ warning_message }}"
+    display_seconds: "{{ warning_display_seconds }}"
+- name: Wait {{ advance_warning_seconds }} seconds
+  wait_for:
+    timeout: "{{ advance_warning_seconds }}"
+  delegate_to: localhost
+- name: Reboot the target
+  win_reboot:
+    msg: "{{ reboot_message }}"

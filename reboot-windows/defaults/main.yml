@@ -1,2 +1,6 @@
 ---
-# defaults file for reboot-windows
+# defaults used when not set anywhere else
+warning_message: "Your system has been chosen for a reboot by a remote Ansible admin. Please save work and log off."
+warning_display_seconds: 240
+reboot_message: "Rebooting as requested by a remote Ansible admin."
+advance_warning_seconds: 300

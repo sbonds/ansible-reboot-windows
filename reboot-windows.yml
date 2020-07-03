@@ -1,0 +1,6 @@
+---
+- name: Reboot a Windows host with advance warning to users
+  hosts: all
+  gather_facts: yes
+  roles:
+    - reboot-windows
